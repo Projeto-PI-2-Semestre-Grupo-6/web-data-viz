@@ -482,6 +482,17 @@ conteinerTelaPrincipal2 {
 
 }
 
+.direitosFooter p{
+    
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    text-align: right;
+    color: #FFE2E2;
+
+
+}
+
 #botaoCadastroTelaInicial {
 
     background-color: #1D293D;
