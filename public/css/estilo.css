@@ -110,7 +110,13 @@ body {
     border-radius: 10px;
     font-weight: bold;
     font-size: clamp(1px, 6.5vw + 5px, 10px);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+
 
 .botaoLogin:hover {
     background-color: #DC2626;
@@ -129,6 +135,10 @@ body {
     border-radius: 10px;
     font-weight: bold;
     font-size: clamp(1px, 6.5vw + 5px, 11px);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -218,13 +228,13 @@ conteinerTelaPrincipal2 {
 .RecursosDoSistema h1 {
     display: flex;
     justify-content: flex-start;
-    width: 73%;  
+    width: 73%;
 }
 
 .containerTextoRecurso {
     margin-top: 50px;
     width: 73%;
-    display: grid;  
+    display: grid;
     justify-content: center;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -248,7 +258,7 @@ conteinerTelaPrincipal2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff; 
+    color: #ffffff;
     margin-bottom: 16px;
 }
 
@@ -270,6 +280,7 @@ conteinerTelaPrincipal2 {
     color: #8a94a3;
     margin: 0;
 }
+
 /* Fim Recursos Do Sistema */
 
 /* Começo Beneficios */
@@ -326,6 +337,7 @@ conteinerTelaPrincipal2 {
     line-height: 1.4;
 
 }
+
 /* Fim Benefícios */
 
 @media (max-width: 850px) {
@@ -427,7 +439,7 @@ conteinerTelaPrincipal2 {
 
 }
 
-.containerFooter{
+.containerFooter {
 
     background-color: #1E293B;
     color: #ffffff;
@@ -437,26 +449,24 @@ conteinerTelaPrincipal2 {
     justify-content: center;
     flex-direction: row;
     align-items: center;
-<<<<<<< Updated upstream
     gap: 5%;
-=======
-    gap: 5%; 
-
->>>>>>> Stashed changes
 
 }
 
-.containerFooter span{
+.containerFooter span {
     color: #DC2626;
 }
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+>>>>>>> 4ce6a74 (merge)
 .containerFooter p{
     color: #90A1B9;
 
 }
 
-.containerEmpresaFooter{
+.containerEmpresaFooter {
     height: auto;
     width: 100%;
     flex-direction: row;
@@ -467,12 +477,12 @@ conteinerTelaPrincipal2 {
 
 }
 
-.containerConteudoFooter{
+.containerConteudoFooter {
 
     padding-bottom: 45px;
 }
 
-.divisaoFooter{
+.divisaoFooter {
     height: 1px;
     width: auto;
     background-color: #DC2626;
@@ -499,8 +509,6 @@ conteinerTelaPrincipal2 {
 
 }
 
-=======
->>>>>>> Stashed changes
 #botaoCadastroTelaInicial {
 
     background-color: #1D293D;
@@ -693,12 +701,12 @@ conteinerTelaPrincipal2 {
         grid-template-columns: 2fr;
         gap: 3dvh;
     }
-    
+
 }
 
 @media(max-width: 850px) {
 
-    
+
     .conteinerImagemTelaPrincipal {
         display: none;
     }
@@ -711,225 +719,226 @@ conteinerTelaPrincipal2 {
 /* LOGIN */
 
 .login {
-  height: var(--tamanho-login);
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
-  background-size: cover;
+    height: var(--tamanho-login);
+    background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+    background-size: cover;
 }
 
 .login .container {
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .card {
-  width: 50%;
-  background-color: #e5e5e5;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  color: palevioletred;
-  flex-direction: column;
-  height: fit-content;
-  padding: 20px 0;
+    width: 50%;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: palevioletred;
+    flex-direction: column;
+    height: fit-content;
+    padding: 20px 0;
 }
 
 .card h2 {
-  margin: 0;
-  font-size: 30px;
+    margin: 0;
+    font-size: 30px;
 }
 
 .formulario {
-  display: flex;
-  height: 90%;
-  width: 80%;
-  justify-content: space-around;
-  flex-direction: column;
+    display: flex;
+    height: 90%;
+    width: 80%;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
 .formulario span {
-  font-size: 15px;
-  font-weight: 800;
+    font-size: 15px;
+    font-weight: 800;
 }
 
 .formulario input {
-  border: 2px solid #32b9cd;
-  text-align: center;
-  border-radius: 10px;
-  margin: 0;
+    border: 2px solid #32b9cd;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0;
 }
 
 .formulario select {
-  border: 2px solid #32b9cd;
-  background-color: white;
-  color: gray;
-  height: 36px;
-  text-align: center;
-  border-radius: 10px;
-  margin: 0;
+    border: 2px solid #32b9cd;
+    background-color: white;
+    color: gray;
+    height: 36px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0;
 }
 
 .campo {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 5px 0;
 }
 
 .botao {
-  cursor: pointer;
-  font-family: "Barlow", sans-serif;
-  border: 0;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 18px;
-  color: #fff;
-  background-color: #ED145B;
-  width: 120px;
-  height: 30px;
-  align-self: center;
-  margin-top: 20px;
+    cursor: pointer;
+    font-family: "Barlow", sans-serif;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ED145B;
+    width: 120px;
+    height: 30px;
+    align-self: center;
+    margin-top: 20px;
 }
 
 .loading-div {
-  width: 50px;
-  display: none;
+    width: 50px;
+    display: none;
 }
 
 .loading-div img {
-  height: 50px;
-  width: 50px;
+    height: 50px;
+    width: 50px;
 }
 
 #div_erros_login {
-  display: none
+    display: none
 }
 
 /* FORMULARIO */
 
-.alerta_erro{
-  display: flex;
-  justify-content: flex-end;
+.alerta_erro {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .card_erro {
-  display: none;
-  background-color: #fff;
-  color: black;
-  width: 230px;
-  position: fixed;
-  border-radius: 4px;
-  border: #ED145B 3px solid;
-  padding: 10px;
-  margin-right: 10%;
+    display: none;
+    background-color: #fff;
+    color: black;
+    width: 230px;
+    position: fixed;
+    border-radius: 4px;
+    border: #ED145B 3px solid;
+    padding: 10px;
+    margin-right: 10%;
 }
 
-.card_erro #mensagem_erro{
-  font-weight: 500;
-  font-size: 20px;
+.card_erro #mensagem_erro {
+    font-weight: 500;
+    font-size: 20px;
 }
 
 .formulario .tipo_campo {
-  font-size: 20px;
-  font-weight: 600 !important;
+    font-size: 20px;
+    font-weight: 600 !important;
 }
 
 .formulario {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 input {
-  margin-bottom: 10px;
-  border: 2px solid #32b9cd;
-  padding: 10px;
-  text-align: center;
-  border-radius: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #32b9cd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
 }
 
 .btn {
-  font-family: "Barlow", sans-serif;
-  border: 0;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 10px 15px;
-  color: white;
-  background-color: #ED145B;
-  width: 120px;
-  align-self: center;
-  margin-top: 5px;
+    font-family: "Barlow", sans-serif;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #ED145B;
+    width: 120px;
+    align-self: center;
+    margin-top: 5px;
 }
 
 .loading-div {
-  width: 50px;
-  margin: auto;
-  display: none;
+    width: 50px;
+    margin: auto;
+    display: none;
 }
 
 .loading-div img {
-  height: 50px;
-  width: 50px;
+    height: 50px;
+    width: 50px;
 }
 
 /* SIMULADOR */
 
 .simulador {
-  color: white;
+    color: white;
 }
 
 .simulador .container {
-  flex-direction: column;
-  overflow: scroll; 
-  height: var(--tamanho-simulador);
+    flex-direction: column;
+    overflow: scroll;
+    height: var(--tamanho-simulador);
 }
 
 /* ALERTA */
 
 #alerta {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .mensagem-alarme {
-  background-color: white;
-  border-radius: 5px;
-  width: 300px;
-  height: 80px;
-  margin: 10px;
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    width: 300px;
+    height: 80px;
+    margin: 10px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .mensagem-alarme h3 {
-  font-size: 14px;
-  margin: 0;
+    font-size: 14px;
+    margin: 0;
 }
 
 .mensagem-alarme .informacao {
-  width: 66%;
+    width: 66%;
 }
 
 .alarme-sino {
-  width: 48px;
-  height: 48px;
-  animation-name: bell;
-  animation-duration: 4s;
-  background-image: url('https://cdn-icons-png.flaticon.com/512/1157/1157000.png');
-  background-size: cover;
-  animation-iteration-count: infinite;
+    width: 48px;
+    height: 48px;
+    animation-name: bell;
+    animation-duration: 4s;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/1157/1157000.png');
+    background-size: cover;
+    animation-iteration-count: infinite;
 }
 
 /* Inicio Missões */
 .banner {
-  height: 350px;
-  background-color: rgb(30, 41, 59);
+    height: 350px;
+    background-color: rgb(30, 41, 59);
 }
-.containerPrimeirotextobanner{
+
+.containerPrimeirotextobanner {
     font-family: "Barlow Semi Condensed", sans-serif;
     display: flex;
     flex-direction: row;
@@ -940,7 +949,8 @@ input {
     color: white;
     font-weight: 700;
 }
-.containerSegundotextobanner{
+
+.containerSegundotextobanner {
 
     font-family: "Source Sans 3", sans-serif;
     display: flex;
@@ -951,10 +961,10 @@ input {
     font-size: 20px;
     color: rgb(144, 161, 185);
     font-weight: 400;
-    
+
 }
 
-.containerTextoAbaixoBanner{
+.containerTextoAbaixoBanner {
     font-family: "Barlow Semi Condensed", sans-serif;
     display: flex;
     align-items: flex-start;
@@ -967,11 +977,26 @@ input {
     font-weight: 700;
     padding-left: 300px;
 }
+
 /* Fim das Missões*/
 @keyframes bell {
-  0%   {transform: rotate(25deg)}
-  25%  {transform: rotate(-25deg)}
-  50%  {transform: rotate(25deg)}
-  75%  {transform: rotate(-25deg)}
-  100% {transform: rotate(25deg)}
+    0% {
+        transform: rotate(25deg)
+    }
+
+    25% {
+        transform: rotate(-25deg)
+    }
+
+    50% {
+        transform: rotate(25deg)
+    }
+
+    75% {
+        transform: rotate(-25deg)
+    }
+
+    100% {
+        transform: rotate(25deg)
+    }
 }
