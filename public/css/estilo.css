@@ -437,7 +437,12 @@ conteinerTelaPrincipal2 {
     justify-content: center;
     flex-direction: row;
     align-items: center;
+<<<<<<< Updated upstream
     gap: 5%;
+=======
+    gap: 5%; 
+
+>>>>>>> Stashed changes
 
 }
 
@@ -445,6 +450,7 @@ conteinerTelaPrincipal2 {
     color: #DC2626;
 }
 
+<<<<<<< Updated upstream
 .containerFooter p{
     color: #90A1B9;
 
@@ -493,6 +499,8 @@ conteinerTelaPrincipal2 {
 
 }
 
+=======
+>>>>>>> Stashed changes
 #botaoCadastroTelaInicial {
 
     background-color: #1D293D;
