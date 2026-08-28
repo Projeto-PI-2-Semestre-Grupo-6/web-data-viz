@@ -203,6 +203,76 @@ conteinerTelaPrincipal2 {
     color: #a80202;
 }
 
+/* Inicio Recursos do Sistema */
+.RecursosDoSistema {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.RecursosDoSistema h1 {
+    display: flex;
+    justify-content: flex-start;
+    width: 73%;  
+}
+
+.containerTextoRecurso {
+    margin-top: 50px;
+    width: 73%;
+    display: grid;  
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+
+
+.Recursos {
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.icone {
+    width: 44px;
+    height: 44px;
+    background: #e2483d;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; 
+    margin-bottom: 16px;
+}
+
+.icone svg {
+    width: 25px;
+    height: 25px;
+}
+
+.Recursos h2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0f1b2d;
+    margin: 0 0 10px 0;
+}
+
+.Recursos p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #8a94a3;
+    margin: 0;
+}
+/* Fim Recursos Do Sistema */
+
+/* Começo Beneficios */
 .segundoContainerPrimeiraTela {
     width: 100%;
     background-color: #F8FAFC;
@@ -256,6 +326,7 @@ conteinerTelaPrincipal2 {
     line-height: 1.4;
 
 }
+/* Fim Benefícios */
 
 @media (max-width: 850px) {
 
@@ -599,14 +670,16 @@ conteinerTelaPrincipal2 {
         display: none;
     }
 
+    .containerTextoRecurso {
+        grid-template-columns: 2fr;
+        gap: 3dvh;
+    }
     
 }
 
 @media(max-width: 850px) {
 
     
-
-
     .conteinerImagemTelaPrincipal {
         display: none;
     }
@@ -831,6 +904,8 @@ input {
   background-size: cover;
   animation-iteration-count: infinite;
 }
+
+/* Inicio Missões */
 .banner {
   height: 350px;
   background-color: rgb(30, 41, 59);
@@ -873,7 +948,7 @@ input {
     font-weight: 700;
     padding-left: 300px;
 }
-
+/* Fim das Missões*/
 @keyframes bell {
   0%   {transform: rotate(25deg)}
   25%  {transform: rotate(-25deg)}
