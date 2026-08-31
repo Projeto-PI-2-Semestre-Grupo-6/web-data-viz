@@ -12,6 +12,11 @@ body {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
+:root {
+    scroll-behavior: smooth;
+
+}
+
 .conteinerHeader {
     width: auto;
     height: 10dvh;
@@ -50,7 +55,6 @@ body {
 }
 
 #menuLinksHeader {
-
     width: 30%;
     display: flex;
     justify-content: center;
