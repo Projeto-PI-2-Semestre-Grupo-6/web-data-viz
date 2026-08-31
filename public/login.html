@@ -2,16 +2,45 @@
 <html lang="pt-br">
 
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="./css/estilo.css">
 </head>
 
-<body>
-Login <br>
-Email: <input type="text" name="" id="email_input"> <br>
-Senha: <input type="text" name="" id="senha_input"> <br> <br>
-<a href="./dashboard/cards.html" onclick="entrar()">Fazer login</a>
+<body class="paginaCadastro">
+
+    <div class="cardCadastro">
+
+        <div class="cabecalhoCadastro">
+            <h2>Bem-vindo de volta</h2>
+            <p>Use suas credenciais institucionais para acessar</p>
+        </div>
+
+        <div class="formularioCadastro">
+
+            <div class="campoCadastro">
+                <label for="email_input">E-MAIL INSTITUCIONAL <span>*</span></label>
+                <input type="text" name="" id="email_input" placeholder="usuario@email.com">
+            </div>
+
+            <div class="campoCadastro">
+                <label for="senha_input">SENHA <span>*</span></label>
+                <div class="campoSenha">
+                    <input type="password" name="" id="senha_input" placeholder="Usuario123@">
+                    <spanc class="iconeOlho">O</span>
+                </div>
+            </div>
+
+            <div class="esqueciSenha">
+                <a href="">Esqueci minha senha</a>
+            </div>
+
+            <button type="button" class="botaoCriarConta" onclick="entrar()">Acessar o sistema</button>
+
+        </div>
+        <div class="rodapeCadastro"> <span>Ainda não tem acesso?</span> <a href="cadastro.html">Cadastre-se</a></div>
+    </div>
 
 </body>
 
@@ -21,7 +50,7 @@ Senha: <input type="text" name="" id="senha_input"> <br> <br>
 
 
     function entrar() {
-      //  aguardar();
+        //  aguardar();
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
@@ -32,10 +61,10 @@ Senha: <input type="text" name="" id="senha_input"> <br> <br>
             finalizarAguardar();
             return false;
         }
-     /*   else {
-            setInterval(sumirMensagem, 5000)
-        }
-            */
+        /*   else {
+               setInterval(sumirMensagem, 5000)
+           }
+               */
 
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
@@ -63,9 +92,9 @@ Senha: <input type="text" name="" id="senha_input"> <br> <br>
                     sessionStorage.ID_USUARIO = json.id;
                     sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
 
-                   // setTimeout(function () {
-                        window.location.href = "./dashboard/cards.html";
-                  //  }, 1000); // apenas para exibir o loading
+                    // setTimeout(function () {
+                    window.location.href = "./dashboard/cards.html";
+                    //  }, 1000); // apenas para exibir o loading
 
                 });
 
@@ -75,7 +104,7 @@ Senha: <input type="text" name="" id="senha_input"> <br> <br>
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                 //   finalizarAguardar(texto);
+                    //   finalizarAguardar(texto);
                 });
             }
 
@@ -86,9 +115,9 @@ Senha: <input type="text" name="" id="senha_input"> <br> <br>
         return false;
     }
 
-  /*  function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
-        */
+    /*  function sumirMensagem() {
+          cardErro.style.display = "none"
+      }
+          */
 
 </script>

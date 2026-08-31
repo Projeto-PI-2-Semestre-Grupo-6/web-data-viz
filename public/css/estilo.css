@@ -978,6 +978,194 @@ input {
     padding-left: 300px;
 }
 
+.paginaCadastro {
+    min-height: 100vh;
+    background-color: #FFFFFF;
+    font-family: "Source Sans 3", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cardCadastro {
+    width: 380px;
+    min-height: 665px;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 30px 27px 22px;
+    box-sizing: border-box;
+}
+
+.cabecalhoCadastro {
+    margin-bottom: 26px;
+}
+
+.cabecalhoCadastro h2 {
+    margin: 0;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    color: #1D293D;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.cabecalhoCadastro p {
+    margin-top: 4px;
+    font-family: "Source Sans 3", sans-serif;
+    color: #90A1B9;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.formularioCadastro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.campoCadastro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campoCadastro label {
+    font-family: "Source Sans 3", sans-serif;
+    color: #62748E;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.campoCadastro label span {
+    color: #DC2626;
+}
+
+.campoCadastro input,
+.campoCadastro select {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 0 13px;
+    border: 1px solid #E2E8F0;
+    border-radius: 7px;
+    background-color: #FFFFFF;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 12px;
+    color: #1D293D;
+    outline: none;
+}
+
+.campoCadastro input:focus,
+.campoCadastro select:focus {
+    border-color: #DC2626;
+}
+
+.campoCadastro select {
+    cursor: pointer;
+}
+
+.campoSenha {
+    width: 100%;
+    position: relative;
+}
+
+.campoSenha input {
+    padding-right: 40px;
+}
+
+.iconeOlho {
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #90A1B9;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.botaoCriarConta {
+    width: 100%;
+    height: 38px;
+    margin-top: 2px;
+    border: none;
+    border-radius: 7px;
+    background-color: #DC2626;
+    color: #FFFFFF;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+
+.botaoCriarConta:hover {
+    background-color: #a80202;
+    transition: 300ms;
+}
+
+.botaoCriarConta span {
+    font-size: 17px;
+}
+
+.rodapeCadastro {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #E2E8F0;
+    text-align: center;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 12px;
+}
+
+.rodapeCadastro span {
+    color: #90A1B9;
+}
+
+.rodapeCadastro a {
+    color: #DC2626;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.rodapeCadastro a:hover {
+    text-decoration: underline;
+}
+
+.esqueciSenha {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -5px;
+}
+
+.esqueciSenha a {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 11px;
+    color: #90A1B9;
+    text-decoration: none;
+}
+
+.esqueciSenha a:hover {
+    color: #DC2626;
+    transition: 300ms;
+}
+
+@media (max-width: 500px) {
+    .paginaCadastro {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .cardCadastro {
+        width: 100%;
+    }
+}
 /* Fim das Missões*/
 @keyframes bell {
     0% {

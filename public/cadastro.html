@@ -2,21 +2,71 @@
 <html lang="pt-br">
 
 <head>
-   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="./css/estilo.css">
 </head>
 
-<body>
-  Cadastro <br>
-  Nome: <input type="text" name="" id="nome_input"> <br>
-  Email: <input type="text" name="" id="email_input"> <br>
-  Senha: <input type="text" name="" id="senha_input"> <br>
-  Confirmar senha: <input type="text" name="" id="confirmacao_senha_input"> <br>
-  Cargo: <input type="text" name="" id="cargo_input"> <br>
-  Código da empresa: <input type="text" name="" id="codigo_input"> <br> <br>
-  <a href="login.html"onclick="cadastrar()">Cadastrar</a>
+<body class="paginaCadastro">
+
+  <div class="cardCadastro">
+
+    <div class="cabecalhoCadastro">
+      <h2>Criar conta</h2>
+      <p>Preencha os dados para acessar o sistema</p>
+    </div>
+
+    <div class="formularioCadastro">
+
+      <div class="campoCadastro">
+        <label for="nome_input">NOME COMPLETO <span>*</span></label>
+        <input type="text" name="" id="nome_input" placeholder="Nome e sobrenome">
+      </div>
+
+      <div class="campoCadastro">
+        <label for="email_input">E-MAIL <span>*</span></label>
+        <input type="text" name="" id="email_input" placeholder="usuario@email.com">
+      </div>
+
+      <div class="campoCadastro">
+        <label for="codigo_input">CÓDIGO DA EMPRESA <span>*</span></label>
+        <input type="text" name="" id="codigo_input" placeholder="A1B2C3">
+      </div>
+
+      <div class="campoCadastro">
+        <label for="cargo_input">SEU CARGO <span>*</span></label>
+        <select name="" id="cargo_input">
+          <option value="analista">Analista</option>
+          <option value="gerente">Gerente</option>
+        </select>
+      </div>
+
+      <div class="campoCadastro">
+        <label for="senha_input">SENHA <span>*</span></label>
+        <div class="campoSenha">
+          <input type="password" name="" id="senha_input" placeholder="Usuario123@">
+          <span class="iconeOlho">O</span>
+        </div>
+      </div>
+
+      <div class="campoCadastro">
+        <label for="confirmacao_senha_input">CONFIRMAR SENHA <span>*</span></label>
+        <div class="campoSenha">
+          <input type="password" name="" id="confirmacao_senha_input"
+            placeholder="Repita a senha digitada anteriormente">
+          <span class="iconeOlho">O</span>
+        </div>
+      </div>
+
+      <button type="button" class="botaoCriarConta" onclick="cadastrar()">Criar conta</button>
+    </div>
+
+    <div class="rodapeCadastro"><span>Já tem acesso?</span><a href="login.html">Entrar na conta</a></div>
+
+  </div>
 </body>
+
 </html>
 
 <script>
@@ -40,7 +90,7 @@
       senhaVar == "" ||
       confirmacaoSenhaVar == "" ||
       cargoVar == "" ||
-      codigoVar == "" 
+      codigoVar == ""
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
