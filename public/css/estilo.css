@@ -441,6 +441,8 @@ conteinerTelaPrincipal2 {
         width: 100%;
     }
 
+    
+
 }
 
 .containerFooter {
@@ -461,10 +463,7 @@ conteinerTelaPrincipal2 {
     color: #DC2626;
 }
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
->>>>>>> 4ce6a74 (merge)
+
 .containerFooter p{
     color: #90A1B9;
 
@@ -499,8 +498,26 @@ conteinerTelaPrincipal2 {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 30px;
+    width: 100%;
+    font-size: clamp(4px, 6.5vw + 6px, 12px);
+
+    
 
 }
+
+.botoesFooter p a{
+    text-decoration: none;
+    color: #FFFF;
+}
+
+.botoesFooter p a:hover{
+    color: #827f7f;
+    transition: 500ms;
+    font-size: clamp(8px, 9.5vw + 6px, 14px);
+}
+
+
+
 
 .direitosFooter p{
     
@@ -718,6 +735,20 @@ conteinerTelaPrincipal2 {
     .conteinerTextoPrimeiraTela {
         width: 90%;
     }
+
+    
+
+    .botoesFooter {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+
+    
+
+}
+
 }
 
 /* LOGIN */
