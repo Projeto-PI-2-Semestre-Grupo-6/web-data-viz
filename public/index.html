@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitoramento</title>
+    <title>MonFire</title>
     <link rel="stylesheet" href="./css/estilo.css">
 
-    <link rel="stylesheet" href="../sobreNos.css">
+    <link rel="stylesheet" href="./css/sobreNos.css">
 
 
 </head>
@@ -16,8 +16,8 @@
     <header>
         <div class="conteinerHeader">
             <div class="conteinerLogoHeader">
-                <img src="../imgs/logo.png" alt="logo">
-                <h1>Bombeiro<span>Monitoramento</span></h1>
+                <img src="./assets/imgs/logo.png" alt="logo">
+                <h1>Mon<span>Fire</span></h1>
             </div>
             <nav id="menuLinksHeader">
                 <ul>
@@ -48,25 +48,27 @@
             </div>
         </div>
     </header>
-     <section class="conteinerTelaPrincipal">
+    <section class="conteinerTelaPrincipal">
         <div class="conteinerPrimeiraTela">
 
             <div class="conteinerTextoPrimeiraTela">
-                <h2>Visibilidade total 
-                    dos seus servidores 
-                   <span> em tempo real.</span></h2>
+                <h2>Visibilidade total
+                    dos seus servidores
+                    <span> em tempo real.</span>
+                </h2>
                 <p>Acompanhe CPU, RAM e Disco de cada servidor da sua unidade. Receba alertas antes que uma falha afete
                     a operação.</p>
                 <div class="botoesTelaPrinicpal">
-                    <button id="botaoCadastroTelaInicial">Cadastrar Unidade</button>
-                    <button id="botaoLoginTelaInicial">Já tenho Acesso</button>
+                    <a href="./cadastro.html" id="botaoCadastroTelaInicial" class="botaoCadastro" >Cadastre-se</a>
+                    <a href="./login.html" id="botaoLoginTelaInicial" class="botaoLogin">Ja tenho cadastro</a>
+
                 </div>
             </div>
             <div class="conteinerImagemTelaPrincipal">
-                <img src="../imgs/imagemBombeiro.png" alt="">
+                <img src="./assets/imgs/imagemBombeiro.png" alt="">
             </div>
         </div>
-         <div class="conteinerInformaçõesTelaInicial">
+        <div class="conteinerInformaçõesTelaInicial">
             <div class="informacoesPrincipais">
                 <h2>47</h2>
                 <p>Servidores Monitorados</p>
@@ -173,24 +175,24 @@
         <div class="ultimoContainerPrimeiraTela" id="sessaoImpacto">
 
             <div class="containerTextoSemImagem">
-            <h3>Impacto positivo na operação</h3>
+                <h3>Impacto positivo na operação</h3>
 
-            <div class="conteinerCardsImpacto">
-                <div class="cardImpacto">
-                    <h2>68%</h2>
-                    <p>de redução nos incidentes não planejados no primeiro trimestre de uso</p>
-                </div>
-                <div class="cardImpacto">
-                    <h2>4,2h</h2>
-                    <p>economizadas por semana em diagnósticos manuais de infraestrutura</p>
-                </div>
-                <div class="cardImpacto">
-                    <h2>100%</h2>
-                    <p>das ocorrências críticas detectadas antes de afetar o usuário final</p>
+                <div class="conteinerCardsImpacto">
+                    <div class="cardImpacto">
+                        <h2>68%</h2>
+                        <p>de redução nos incidentes não planejados no primeiro trimestre de uso</p>
+                    </div>
+                    <div class="cardImpacto">
+                        <h2>4,2h</h2>
+                        <p>economizadas por semana em diagnósticos manuais de infraestrutura</p>
+                    </div>
+                    <div class="cardImpacto">
+                        <h2>100%</h2>
+                        <p>das ocorrências críticas detectadas antes de afetar o usuário final</p>
+                    </div>
                 </div>
             </div>
-            </div>
-            
+
         </div>
     </section>
 
@@ -201,7 +203,7 @@
             <div class="containerConteudoFooter">
 
                 <img src="./assets/imgs/logo.png" alt="logo">
-                <h3>BOMBEIROS <span>MONITORAMENTO</span></h3>  <br>            
+                <h3>Mon<span>Fire</span></h3> <br>
                 <p>Monitoramento de servidores para o Corpo de Bombeiros do Brasil.</p>
 
             </div>
@@ -210,7 +212,7 @@
 
             <div class="botoesFooter">
 
-                <p><a href="#">Início</a></p> 
+                <p><a href="#">Início</a></p>
                 <p><a href="#sessaoRecursos">Recursos</a></p>
                 <p><a href="#sessaoBeneficios">Benefícios</a></p>
                 <p><a href="#sessaoImpacot">Impacto</a></p>
@@ -223,7 +225,7 @@
 
     </div>
 
-    
+
 
     <script>
         function mostrarMenu() {
@@ -235,16 +237,16 @@
         }
     </script>
 
-<script>
-    function mostrarMenu() {
-        if (menuLinksHeader.style.display == "flex") {
-            menuLinksHeader.style.display = "none";
-        } else {
-            menuLinksHeader.style.display = "flex"
+    <script>
+        function mostrarMenu() {
+            if (menuLinksHeader.style.display == "flex") {
+                menuLinksHeader.style.display = "none";
+            } else {
+                menuLinksHeader.style.display = "flex"
+            }
         }
-    }
-</script>
-   
+    </script>
+
 </body>
 
 </html>

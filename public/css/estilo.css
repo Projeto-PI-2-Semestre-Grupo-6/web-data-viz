@@ -736,6 +736,7 @@ conteinerTelaPrincipal2 {
         width: 90%;
     }
 
+
     
 
     .botoesFooter {
@@ -745,8 +746,26 @@ conteinerTelaPrincipal2 {
     grid-template-columns: repeat(2, 1fr);
     width: 80%;
 
-    
+  
 
+}
+
+@media(max-width: 530px) {
+
+.informacoesPrincipais {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #32b9cd;
+    font-size: clamp(6px, 1.5vw + 8px, 25px);
+
+  }
+
+  .informacoesPrincipais p{
+
+    margin-left: 10%;
+  }
 }
 
 }
