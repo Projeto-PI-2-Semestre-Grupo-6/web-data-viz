@@ -11,7 +11,7 @@
 <body class="paginaCadastro">
 
   <div class="cardCadastro">
-
+<a href="./index.html" style="color: #dc2626; text-decoration: none;" >x</a>
     <div class="cabecalhoCadastro">
       <h2>Criar conta</h2>
       <p>Preencha os dados para acessar o sistema</p>
@@ -46,7 +46,7 @@
         <label for="senha_input">SENHA <span>*</span></label>
         <div class="campoSenha">
           <input type="password" name="" id="senha_input" placeholder="Usuario123@">
-          <span class="iconeOlho">0</span>
+          <span class="iconeOlho" onclick="olhoCadastro()">0</span>
         </div>
       </div>
 
@@ -55,7 +55,7 @@
         <div class="campoSenha">
           <input type="password" name="" id="confirmacao_senha_input"
             placeholder="Repita a senha digitada anteriormente">
-          <span class="iconeOlho">0</span>
+          <span class="iconeOlho" onclick="olhoConfirmar()">0</span>
         </div>
       </div>
 
@@ -71,17 +71,37 @@
 
 <script>
 
+  function olhoCadastro(){
+    if(senha_input.type == "text"){
+        senha_input.type = "password"
+    } else {
+        senha_input.type = "text"
+    }
+}
+
+function olhoConfirmar(){
+    if(confirmacao_senha_input.type == "text"){
+        confirmacao_senha_input.type = "password"
+    } else {
+        confirmacao_senha_input.type = "text"
+    }
+}
+
   function cadastrar() {
     // aguardar();
 
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
+
+    
     var nomeVar = nome_input.value;
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
     var cargoVar = cargo_input.value
     var codigoVar = codigo_input.value;
+
+    if(confirmacaoSenhaVar == senhaVar){
 
     // Verificando se há algum campo em branco
     if (
@@ -157,7 +177,10 @@
       });
 
     return false;
+  } else{
+    console.log("A senhas devem coincidir")
   }
+}
 
   /* Listando empresas cadastradas 
   function listar() {

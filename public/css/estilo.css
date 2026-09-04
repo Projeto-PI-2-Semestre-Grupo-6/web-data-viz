@@ -1138,6 +1138,8 @@ input {
     padding-bottom: 70px;
 }
 
+
+
 .containerTexto {
     width: 700px;
 }
@@ -1427,6 +1429,15 @@ font-weight: 700;
        width: 85%;
        grid-template-columns: 1fr;
     }
+}
+
+@media (max-width: 850px) {
+
+    .containerSecao {
+      
+        gap: 1dvh;
+    }
+
 }
 /* Fim das Missões*/
 @keyframes bell {

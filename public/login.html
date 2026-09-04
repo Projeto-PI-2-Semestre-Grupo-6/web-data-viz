@@ -11,7 +11,7 @@
 <body class="paginaCadastro">
 
     <div class="cardCadastro">
-
+<a href="./index.html" style="color: #dc2626; text-decoration: none;" >x</a>
         <div class="cabecalhoCadastro">
             <h2>Bem-vindo de volta</h2>
             <p>Use suas credenciais institucionais para acessar</p>
@@ -28,7 +28,7 @@
                 <label for="senha_input">SENHA <span>*</span></label>
                 <div class="campoSenha">
                     <input type="password" name="" id="senha_input" placeholder="Usuario123@">
-                    <spanc class="iconeOlho">O</span>
+                    <spanc class="iconeOlho" onclick="olhoLogin()">O</span>
                 </div>
             </div>
 
@@ -48,6 +48,13 @@
 
 <script>
 
+function olhoLogin(){
+    if(senha_input.type == "text"){
+        senha_input.type = "password"
+    } else {
+        senha_input.type = "text"
+    }
+}
 
     function entrar() {
         //  aguardar();
