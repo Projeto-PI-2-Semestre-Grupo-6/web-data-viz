@@ -1264,12 +1264,14 @@ input {
 
 .iconeOlho {
     position: absolute;
+    padding-bottom: 5px;
     right: 13px;
     top: 50%;
     transform: translateY(-50%);
     color: #90A1B9;
-    font-size: 13px;
     cursor: pointer;
+    width: 15px;
+    height: 15px;
 }
 
 .botaoCriarConta {

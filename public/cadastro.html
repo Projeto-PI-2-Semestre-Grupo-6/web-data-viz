@@ -46,7 +46,7 @@
         <label for="senha_input">SENHA <span>*</span></label>
         <div class="campoSenha">
           <input type="password" name="" id="senha_input" placeholder="Usuario123@">
-          <span class="iconeOlho" onclick="olhoCadastro()">0</span>
+          
         </div>
       </div>
 
@@ -55,7 +55,7 @@
         <div class="campoSenha">
           <input type="password" name="" id="confirmacao_senha_input"
             placeholder="Repita a senha digitada anteriormente">
-          <span class="iconeOlho" onclick="olhoConfirmar()">0</span>
+       
         </div>
       </div>
 
@@ -71,21 +71,6 @@
 
 <script>
 
-  function olhoCadastro(){
-    if(senha_input.type == "text"){
-        senha_input.type = "password"
-    } else {
-        senha_input.type = "text"
-    }
-}
-
-function olhoConfirmar(){
-    if(confirmacao_senha_input.type == "text"){
-        confirmacao_senha_input.type = "password"
-    } else {
-        confirmacao_senha_input.type = "text"
-    }
-}
 
   function cadastrar() {
     // aguardar();
