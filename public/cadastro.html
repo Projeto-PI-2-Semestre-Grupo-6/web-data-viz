@@ -6,12 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MonFire -Cadastro</title>
   <link rel="stylesheet" href="./css/estilo.css">
+  <link rel="shortcut icon" href="./assets/icon/LogoMonfire.png" type="image/x-icon">
+
 </head>
 
 <body class="paginaCadastro">
 
   <div class="cardCadastro">
-<a href="./index.html" style="color: #dc2626; text-decoration: none;" >x</a>
+    <a href="./index.html" style="color: #dc2626; text-decoration: none;">x</a>
     <div class="cabecalhoCadastro">
       <h2>Criar conta</h2>
       <p>Preencha os dados para acessar o sistema</p>
@@ -46,7 +48,7 @@
         <label for="senha_input">SENHA <span>*</span></label>
         <div class="campoSenha">
           <input type="password" name="" id="senha_input" placeholder="Usuario123@">
-          
+
         </div>
       </div>
 
@@ -55,7 +57,7 @@
         <div class="campoSenha">
           <input type="password" name="" id="confirmacao_senha_input"
             placeholder="Repita a senha digitada anteriormente">
-       
+
         </div>
       </div>
 
@@ -78,7 +80,7 @@
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
 
-    
+
     var nomeVar = nome_input.value;
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
@@ -86,86 +88,86 @@
     var cargoVar = cargo_input.value
     var codigoVar = codigo_input.value;
 
-    if(confirmacaoSenhaVar == senhaVar){
+    if (confirmacaoSenhaVar == senhaVar) {
 
-    // Verificando se há algum campo em branco
-    if (
-      nomeVar == "" ||
-      emailVar == "" ||
-      senhaVar == "" ||
-      confirmacaoSenhaVar == "" ||
-      cargoVar == "" ||
-      codigoVar == ""
-    ) {
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
+      // Verificando se há algum campo em branco
+      if (
+        nomeVar == "" ||
+        emailVar == "" ||
+        senhaVar == "" ||
+        confirmacaoSenhaVar == "" ||
+        cargoVar == "" ||
+        codigoVar == ""
+      ) {
+        cardErro.style.display = "block";
+        mensagem_erro.innerHTML =
+          "(Mensagem de erro para todos os campos em branco)";
 
-      finalizarAguardar();
+        finalizarAguardar();
+        return false;
+      } else {
+        setInterval(sumirMensagem, 5000);
+      }
+
+      /* Verificando se o código de ativação é de alguma empresa cadastrada
+      for (let i = 0; i < listaEmpresasCadastradas.length; i++) {
+        if (listaEmpresasCadastradas[i].codigo_ativacao == codigoVar) {
+          idEmpresaVincular = listaEmpresasCadastradas[i].idEmpresa
+          console.log("Código de ativação válido.");
+          break;
+        } else {
+          cardErro.style.display = "block";
+          mensagem_erro.innerHTML = "(Mensagem de erro para código inválido)";
+          finalizarAguardar();
+        }
+      }
+        */
+
+      // Enviando o valor da nova input
+      fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // crie um atributo que recebe o valor recuperado aqui
+          // Agora vá para o arquivo routes/usuario.js
+          nomeServer: nomeVar,
+          emailServer: emailVar,
+          senhaServer: senhaVar,
+          cargoServer: cargoVar,
+          codigoServer: codigoVar
+        }),
+      })
+        .then(function (resposta) {
+          console.log("resposta: ", resposta);
+
+          if (resposta.ok) {
+            cardErro.style.display = "block";
+
+            mensagem_erro.innerHTML =
+              "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+            setTimeout(() => {
+              window.location = "login.html";
+            }, "2000");
+
+            limparFormulario();
+            finalizarAguardar();
+          } else {
+            throw "Houve um erro ao tentar realizar o cadastro!";
+          }
+        })
+        .catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+          finalizarAguardar();
+        });
+
       return false;
     } else {
-      setInterval(sumirMensagem, 5000);
+      console.log("A senhas devem coincidir")
     }
-
-    /* Verificando se o código de ativação é de alguma empresa cadastrada
-    for (let i = 0; i < listaEmpresasCadastradas.length; i++) {
-      if (listaEmpresasCadastradas[i].codigo_ativacao == codigoVar) {
-        idEmpresaVincular = listaEmpresasCadastradas[i].idEmpresa
-        console.log("Código de ativação válido.");
-        break;
-      } else {
-        cardErro.style.display = "block";
-        mensagem_erro.innerHTML = "(Mensagem de erro para código inválido)";
-        finalizarAguardar();
-      }
-    }
-      */
-
-    // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        nomeServer: nomeVar,
-        emailServer: emailVar,
-        senhaServer: senhaVar,
-        cargoServer: cargoVar,
-        codigoServer: codigoVar
-      }),
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
-
-        if (resposta.ok) {
-          cardErro.style.display = "block";
-
-          mensagem_erro.innerHTML =
-            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-          setTimeout(() => {
-            window.location = "login.html";
-          }, "2000");
-
-          limparFormulario();
-          finalizarAguardar();
-        } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
-        }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
-      });
-
-    return false;
-  } else{
-    console.log("A senhas devem coincidir")
   }
-}
 
   /* Listando empresas cadastradas 
   function listar() {
